@@ -4,14 +4,12 @@ from tkinter import Canvas
 import random
 
 root = Tk()
-root.geometry("600x600")
+root.geometry("600x640")
 root.title("Random Walker")
 root.resizable(1,1)
 
-
-c = Canvas(root, height=1000, width=1000, bg='WHITE')
-c.pack(fill=BOTH, expand=True)
-
+c = Canvas(root, height=600, width=600, bg='WHITE')
+c.pack()
 
 def drawGrid(array,no_of_grids):
     size = 600/no_of_grids
@@ -27,8 +25,11 @@ def drawGrid(array,no_of_grids):
                 dfill= 'bisque3'
                 c.create_rectangle(i*size,j*size,(i*size+size),(j*size+size),width=width,outline="black",fill=fill,disabledfill=dfill)
 
-no_of_grids = 20
-array = [[random.randint(0,1) for x in range(no_of_grids)] for x in range(no_of_grids)]
-drawGrid(array,no_of_grids)
+def createGrid():
+    no_of_grids = 20
+    array = [[random.randint(0,1) for x in range(no_of_grids)] for x in range(no_of_grids)]
+    drawGrid(array,no_of_grids)
+
+button = Button(root,text="Generate",command=createGrid).pack()
 
 root.mainloop()
