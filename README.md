@@ -10,3 +10,7 @@ How to use -
 3. Enjoy.
 
 Illustration -
+
+![](https://github.com/milannzz/Random-Walker/blob/main/Images/img1.png)
+
+![](https://github.com/milannzz/Random-Walker/blob/main/Images/img2.png)
